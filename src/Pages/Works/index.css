@@ -1,0 +1,70 @@
+.work__header {
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+.project__section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+	justify-content: space-between;
+  margin-bottom: 160px;
+}
+.project__subheader {
+  color: var(--Main-blue, #182963);
+  margin-bottom: 12px;
+}
+.project__image {
+  width: 550px;
+  height: 380px;
+  border-radius: 20px;
+  background: #edf8fe;
+  background-size: cover;
+  background-position: center;
+}
+.project__image:hover {
+  transform: scale(1.1); /* Увеличивает изображение на 10% */
+  transition: transform 0.3s ease-in-out; /* Плавное увеличение и уменьшение */
+}
+
+.project__card {
+  overflow: hidden; /* Гарантирует, что увеличенное изображение не выйдет за пределы карточки */
+}
+
+@media only screen and (max-width: 1440px) {
+	.project__section{
+		justify-content: center;
+	}
+	.project__card{
+		padding: 0px 10px;
+	}
+	.project__image{
+		width: 690px;
+	}
+}
+@media only screen and (max-width: 727px) {
+	.project__image{
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+@media only screen and (max-width: 425px) {
+  .work__header {
+    margin-top: 0;
+  }
+  .project__section {
+    flex-direction: column;
+    gap: 34px;
+		margin-bottom: 60px;
+  }
+  .project__image {
+    height: 240px;
+    margin-bottom: 24px;
+  }
+  .project__subheader {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+		margin-top: 0;
+  }
+}

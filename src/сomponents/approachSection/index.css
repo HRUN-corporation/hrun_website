@@ -1,0 +1,36 @@
+.approach{
+	display: flex;
+	position: relative;
+	transform: translateY(100%);
+	z-index: 1;
+	opacity: 0;
+}
+.approach__wrapper {
+  width: 50%;
+}
+.approach__title {
+  margin-bottom: 45px;
+}
+.img2{
+	/* margin-top: -5%; */
+	transform: scale(1);
+  object-fit: cover;
+}
+@media only screen and (max-width: 1140px) {
+	.approach{
+		flex-direction: column;
+	}
+	.approach__wrapper{
+		width: 100%;
+		position: relative;
+	}
+}
+@media only screen and (max-width: 425px) {	
+  .approach__title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+		margin-bottom: 24px;
+  }
+	
+}

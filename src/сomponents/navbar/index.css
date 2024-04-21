@@ -1,0 +1,15 @@
+.nav {
+	margin-top: 50px;
+	height: 82px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 35px;
+}
+
+.logo {
+	width: 156px;
+}
+
+
+

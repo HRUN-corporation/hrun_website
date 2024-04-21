@@ -1,0 +1,146 @@
+footer {
+  padding: 48px 70px 73px 70px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--light-blue-footer, #edf8fe);
+}
+.footer__social {
+  margin-top: 48px;
+  display: flex;
+  gap: 16px;
+  margin-bottom: 104px;
+}
+.footer__social_icons {
+  width: 33px; /* Установите ширину и высоту контейнера */
+  height: 33px;
+	cursor: pointer;
+}
+.footer__social_icon,
+.footer__social_icon_hover {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease; /* Плавный переход прозрачности */
+	display: block;
+}
+.footer__social_icon_hover {
+  opacity: 0; /* Изначально скрыто */
+	display: none;
+}
+.footer__social_icons:hover .footer__social_icon {
+  opacity: 0; /* Исчезновение при ховере */
+	display: none;
+}
+.footer__social_icons:hover .footer__social_icon_hover {
+  opacity: 1; /* Появление при ховере */
+	display: block;
+	width: 40px;
+	height: 40px;
+}
+
+
+#footer__input_email {
+  position: relative;
+  margin-top: 12px;
+  width: 309px;
+  height: 44px;
+  padding: 12px 8px;
+  border: 1px solid var(--Ocean-Blue, #2ec3e2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 30px;
+  background-color: var(--light-blue-footer, #edf8fe);
+}
+
+#footer__input_email::before {
+  content: url("../../icons/arrow-small.svg");
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}
+.footer__heading {
+  color: var(--Ocean-Blue, #2ec3e2);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.footer__subheader {
+	display: flex;
+	flex-direction: column;
+  font-size: 20px;
+  font-weight: 400;
+}
+.footer__subheader {
+  white-space: pre-line; /* Позволяет сохранить переносы строк */
+}
+
+.footer__subheader br {
+  margin-top: 12px; /* Устанавливает верхний отступ после каждого <br> */
+}
+
+.footer__subheader_item {
+  margin-bottom: 12px;
+	cursor: pointer;
+	text-decoration: none;
+	color: var(--Dark100, #0A0D1A);
+}
+.footer__subheader_item:hover {
+	color: var(--Primary-color, #12a6c8);
+	transition: transform 0.3s ease-in-out;
+	transform: scale(1); 
+}
+@media only screen and (max-width: 967px) {
+	footer{
+		display: grid;
+		grid-template-columns: 1fr 1fr; /* Две колонки с одинаковой шириной */
+  	grid-template-rows: auto auto; 
+	}
+}
+@media only screen and (max-width: 767px) {
+  footer {
+		display: flex;
+    flex-direction: column;
+    padding: 24px 16px 40px 16px;
+  }
+  .footer__item {
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 24px;
+  }
+  .footer__item_social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer__img {
+    width: 99px;
+    height: 47px;
+  }
+  .footer__copyrite {
+    display: none;
+  }
+  .footer__social {
+    margin: 0;
+  }
+  .footer__social_icon {
+    width: 28px;
+    height: 28px;
+  }
+	
+  .footer__item_news {
+    font-size: 20px;
+  }
+  #footer__input_email {
+    width: 100%;
+  }
+  .footer__heading,
+  .footer__subheader {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+}

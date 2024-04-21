@@ -1,0 +1,142 @@
+.contact {
+  margin-top: 160px;
+  margin-bottom: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contact__wrapper {
+  width: 50%;
+}
+.contact__title {
+  margin-bottom: 15px;
+}
+.contact__descr {
+  width: 530px;
+  margin-top: 31px;
+  margin-bottom: 45px;
+}
+.contact__icons {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+.contact__icons_phone,
+.contact__icons_email {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.contact__form {
+  /* width: 50%; */
+}
+.contact__feed-form {
+  display: grid;
+  justify-content: space-between;
+  row-gap: 24px;
+}
+.contact__input {
+  position: relative;
+  width: 530px;
+}
+#name,
+#phone,
+#email {
+  width: 100%;
+  height: 44px;
+  padding: 12px 8px;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #2ec3e2;
+  background: #f8fbff;
+}
+textarea {
+  width: 100%;
+  height: 64px;
+  border-radius: 8px;
+  border: 1px solid #2ec3e2;
+  background: #f8fbff;
+}
+#name:focus,
+#phone:focus,
+#email:focus,
+textarea:focus {
+  border-radius: 8px;
+  border: 1px solid var(--Primary-color, #12A6C8);
+  background: var(--light-blue-footer, #EDF8FE); /* Укажите значение по умолчанию или убедитесь, что переменная определена */
+}
+.filled {
+  border: 1px solid var(--Gradient-for-logo, #084378);
+  background: var(--white-blue-input, #F8FBFF);
+}
+label {
+  position: absolute;
+}
+.contact__comment {
+  display: flex;
+  color: #8e93a2;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: -9px;
+}
+.contact__triggers {
+  margin-top: -16px;
+}
+.contact__policy {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+a {
+  text-decoration: underline;
+  color: #8e93a2;
+}
+@media only screen and (max-width: 1140px) {
+	.contact {
+    margin-top: 60px;
+		margin-bottom: 60px;
+    flex-direction: column;
+  }
+	.contact__wrapper {
+    width: 100%;
+  }
+  .contact__title {
+    margin-bottom: 8px;
+  }
+	.contact__descr {
+    margin-top: 24px;
+    margin-bottom: 41px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 727px) { 
+	.contact__input {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 425px) { 
+  .contact__title,
+  .contact__subtitle {
+    line-height: normal;
+  }
+  .contact__descr div {
+    display: inline; /* Элементы будут отображаться строчно */
+		color: var(--dark-70-for-body-text, #35373F);
+  }
+  .contact__icons {
+    gap: 16px;
+  }
+  .contact__form {
+    margin-top: 19px;
+  }
+  .contact__feed-form {
+    row-gap: 12px;
+  }
+  .contact__comment {
+    margin-bottom: 0;
+  }
+	.contact__policy{
+		margin-top: 8px;
+		align-items: baseline;
+	}
+}

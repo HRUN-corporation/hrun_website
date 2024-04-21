@@ -1,0 +1,97 @@
+/* :root {
+  --Gradient-for-logo: linear-gradient(180deg, #084378 0%, #0A437A 0.01%, #483BB5 27.6%, #347BB8 41.15%, #12A6D0 55.73%, #52EFF2 74.48%, #12A6C8 100%);
+} */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+.container {
+  margin: 0 70px;
+}
+
+.p1 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #35373f;
+  margin: 0;
+}
+.p2 {
+  color: #8e93a2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.h1 {
+  position: relative;
+  font-size: 82px;
+  font-weight: 700;
+  line-height: 106px;
+  color: #0a0d1a;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+
+.h2 {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 45px;
+  color: #0a0d1a;
+}
+.h3 {
+  font-weight: 700;
+  line-height: 32px;
+  font-size: 25px;
+  color: #000;
+  margin: 0;
+}
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000;
+  margin: 0;
+}
+@media only screen and (max-width: 425px) {
+  .h1 {
+    font-size: 28px;
+    margin-bottom: 24px;
+    line-height: normal;
+  }
+  .h2 {
+    font-size: 20px;
+    line-height: 45px;
+  }
+  .h3 {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  .p2 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+  }
+	.p1{
+		font-size: 19px;
+	}
+}

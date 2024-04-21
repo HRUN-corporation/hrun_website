@@ -1,0 +1,134 @@
+article {
+  border-bottom: 1px solid var(--Ocean-Blue, #2ec3e2);
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+}
+
+.service__header{
+	position: relative;
+	width: 100%;
+}
+.table__header {
+  margin-top: 160px;
+  /* max-width: 860px; */
+  text-align: center;
+}
+.table__subheader {
+  /* margin-top: -115px; */
+  margin-bottom: 32px;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 106px;
+  text-align: center;
+}
+.categoryRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: start;
+}
+.serviceItem {
+  display: flex;
+  align-items: center;
+  width: 762px;
+}
+.categoryHeader {
+  display: flex;
+  margin-right: 68px;
+  width: 375px;
+  align-items: center;
+  justify-content: space-between;
+}
+.category {
+  margin-right: 24px;
+  color: var(--Main-blue, #182963);
+  text-align: start;
+}
+.serviceImage {
+	position: absolute;
+  top: -100%;
+	width: 100%;
+}
+.servicesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.service__section{
+	position: relative;
+	transform: translateY(100%);
+  overflow: hidden;
+
+}
+.service__title {
+  width: 183px;
+  text-align: start;
+  margin-right: 24px;
+}
+@media only screen and (max-width: 967px) {
+	.service__header{
+		margin: 0 auto;
+	}
+	.table__header, .table__subheader{
+		font-size: 46px;
+		line-height: normal;
+	}
+	.serviceImage{
+		width: 100%;
+	}
+	.categoryRow{
+		flex-direction: column;
+	}	
+	.servicesWrapper {
+		margin-top: 26px;
+	}
+	.serviceItem{
+		width: 100%;
+		justify-content: space-between;
+	}
+	.serviceItem__descr{
+		width: 80%;
+	}
+}
+@media only screen and (max-width: 727px) {
+  .header {
+		position: relative;
+    margin-top: 0;
+    font-weight: 700;
+    line-height: 30px;
+  }
+	.table__header{
+		font-size: 28px;
+	}
+  .table__subheader {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+		margin-bottom: 40px;
+  }	
+	.categoryHeader{
+		width: 100%;
+		margin-right: 0;
+	}
+	.service__title{
+		width: 150px;
+		margin-right: 8px;
+	}
+
+	.serviceItem__descr{
+		font-size: 19px;
+	}
+	.table__header{
+		margin-top: 120px;
+	}
+	.img__service1_mobile{
+		position: absolute;
+    top: -175%;
+	}
+}
+@media only screen and (max-width: 425px) {
+  .serviceImage{
+		max-width: 261px;
+	}
+}
