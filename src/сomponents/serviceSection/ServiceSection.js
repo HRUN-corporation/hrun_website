@@ -64,17 +64,14 @@ function ServiceSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
 
-		animationService();
+    animationService();
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-
-		
   }, []);
 
   const imageSource = windowWidth >= 768 ? img3 : img3_mobile;
@@ -101,14 +98,14 @@ function ServiceSection() {
 
   function animationService() {
     gsap.to(".service__list", {
-			stagger: 1.5,
-			duration: 1,
+      stagger: 1.5,
+      duration: 1,
       opacity: 1,
       yPercent: 50,
       scrollTrigger: {
         trigger: ".serviceSection",
         start: "top 30%",
-				toggleActions: "play none none reverse",
+        toggleActions: "play none none reverse",
         end: "bottom bottom",
         scrub: 1,
       },
@@ -131,26 +128,25 @@ function ServiceSection() {
             </span>
           </p>
           <ul className="service__offers">
-            <div
-              className="h2 service__list"
-              onClick={() => (window.location.href = "/services")}
-            >
-              Basic Package
-              <img src={arrow} alt="arrow" className="arrow" />
-            </div>
+            <Link to="services">
+              <div className="h2 service__list">
+                Basic Package
+                <img src={arrow} alt="arrow" className="arrow" />
+              </div>
+            </Link>
 
-            <div
-              className="h2 service__list"
-              onClick={() => (window.location.href = "/services")}
-            >
-              Standard Package
-              <img src={arrow} alt="arrow" className="arrow" />
-            </div>
-            <div className="h2 service__list" to="/services">
-              {/* <Link className="h2 service__list" to="/services"> */}
-              Premium Package
-              <img src={arrow} alt="arrow" className="arrow" />
-            </div>
+            <Link to="services">
+              <div className="h2 service__list">
+                Standard Package
+                <img src={arrow} alt="arrow" className="arrow" />
+              </div>
+            </Link>
+            <Link to="services">
+              <div className="h2 service__list">
+                Premium Package
+                <img src={arrow} alt="arrow" className="arrow" />
+              </div>
+            </Link>
           </ul>
         </div>
       </div>
