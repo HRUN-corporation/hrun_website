@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./responsive.css";
 
@@ -11,8 +11,6 @@ import About from "./Pages/About/About";
 import Works from "./Pages/Works/Works";
 
 function App() {
-
-
   return (
     <Router>
       <div>

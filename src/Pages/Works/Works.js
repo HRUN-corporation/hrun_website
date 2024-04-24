@@ -1,13 +1,17 @@
-import React from "react";
-import "./index.css"; 
-import arrow from '../../icons/Logo.svg'
+import React, { useEffect } from "react";
+import "./index.css";
+import arrow from "../../icons/Logo.svg";
 import Contact from "../../сomponents/contactSection/Contact";
+import { useContentfulEntries } from "../../api/contentful/useContentfulFetch";
 
 // Компонент для отдельного проекта
 const ProjectCard = ({ img, category, title, description }) => (
   <div className="project__card">
     {/* Изображение добавлено через инлайн стиль */}
-    <div className="project__image" style={{ backgroundImage: `url(${img})` }} />
+    <div
+      className="project__image"
+      style={{ backgroundImage: `url(${img})` }}
+    />
     <h3 className="h3 project__header">{category}</h3>
     <h2 className="h2 project__subheader">{title}</h2>
     <p className="p1">{description}</p>
@@ -37,43 +41,18 @@ const ProjectsSection = ({ projects }) => (
 
 // Главный компонент страницы Work
 const Work = () => {
+  const { data: projectsData } = useContentfulEntries("work");
   // Данные для проектов, предполагается динамическая загрузка или статическое определение
-  const projectsData = [
-    {
-			img: arrow,
-      category: "Real estate/ E-commerce",
-      title: "Riel",
-      description:
-        "We helped create a service for securely selling photos and renders.",
-    },
-    {
-			img: arrow,
-      category: "Fintech",
-      title: "LMS Web and Mobile App",
-      description:
-        "We helped create a service for securely selling photos and renders.",
-    },
-    {
-			img: arrow,
-      category: "Education",
-      title: "LMS Web and Mobile App",
-      description:
-        "We helped create a service for securely selling photos and renders.",
-    },
-		{
-			img: arrow,
-      category: "Health",
-      title: "Horizon",
-      description:
-        "We helped create a service for securely selling photos and renders.",
-    }
-  ];
+
+  if (!projectsData) {
+    return null;
+  }
 
   return (
     <div className="work__page">
       <h1 className="h1 work__header">OUR WORK</h1>
       <ProjectsSection projects={projectsData} />
-			<Contact />
+      <Contact />
     </div>
   );
 };
